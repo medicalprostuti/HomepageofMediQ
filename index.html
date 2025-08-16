@@ -1,4 +1,4 @@
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -101,7 +101,6 @@
     /* Notice Image */
     .notice-img {
       width: 40px;
-      /* Adjusted for header fit */
       height: auto;
       cursor: pointer;
       z-index: 1100;
@@ -110,7 +109,6 @@
 
     .notice-img:hover {
       transform: scale(1.1);
-      /* Slight hover effect */
     }
 
     .site-name {
@@ -140,7 +138,7 @@
       flex-direction: column;
       align-items: center;
       z-index: 1200;
-      overflow-y: auto; /* The fix */
+      overflow-y: auto;
     }
 
     /* Notification Panel */
@@ -223,35 +221,43 @@
       font-weight: normal;
     }
 
+    /* Main Content */
+    .main-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
     .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background: white;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
       max-width: 500px;
       width: 90%;
-      text-align: left;
-      margin-top: 350px;
+      text-align: center;
     }
 
-    h1 {
+    .container h2 {
       font-weight: bold;
       color: #1b0b54;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-weight: bold;
-      font-size: 18px;
+    .container p {
+      font-weight: normal;
+      font-size: 16px;
       color: #000000;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background-color: #1b0b54;
       color: white;
       text-decoration: none;
@@ -259,16 +265,11 @@
       border-radius: 5px;
       font-size: 16px;
       text-align: center;
+      transition: background-color 0.3s;
     }
 
     .button:hover {
-      background-color: #1b0b54;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
+      background-color: #0d0633;
     }
   </style>
 </head>
@@ -276,9 +277,7 @@
 <body>
 
   <div id="splash">
-    <img
-      src='https://ik.imagekit.io/6pursdr1y/BRAINIAC%20ACAD%20MICS%20(2).png?updatedAt=1747454693733'
-  
+    <img src='https://ik.imagekit.io/6pursdr1y/BRAINIAC%20ACAD%20MICS%20(2).png?updatedAt=1747454693733'
       alt="Splash Image">
   </div>
 
@@ -287,23 +286,26 @@
     <h2>মেনুবার</h2>
     <a href="https://medicalprostuti.github.io/features/">ফ্রি ডেমো</a>
     <a href="https://medicalprostuti.github.io/features/">অনুশীলন</a>
-    <a href="https://medicalprostuti.github.io/features/"> ডেইলি এক্স্যাম </a>
-    <a href="https://medicalprostuti.github.io/features/"> মক এক্স্যাম </a>
+    <a href="https://medicalprostuti.github.io/features/">ডেইলি এক্স্যাম</a>
+    <a href="https://medicalprostuti.github.io/features/">মক এক্স্যাম</a>
     <a href="https://medicalprostuti.github.io/features/">মেগা এক্স্যাম</a>
-    <a href="https://medicalprostuti.github.io/features/"> প্রশ্ন ব্যাংক </a>
+    <a href="https://medicalprostuti.github.io/features/">প্রশ্ন ব্যাংক</a>
     <a href="https://medicalprostuti.github.io/features/">প্রোগ্রেস কার্ড</a>
     <a href="https://medicalprostuti.github.io/features/">লিডারবোর্ড</a>
     <a href="https://medicalprostuti.github.io/features/">ম্যাটারিয়ালস</a>
-     <a href="https://medicalprostuti.github.io/features/">ইউজার গাইডলাইন</a>
+    <a href="https://medicalprostuti.github.io/features/">ইউজার গাইডলাইন</a>
     <a href="https://medicalprostuti.github.io/features/">যোগাযোগ করো</a>
     <a href="https://medicalprostuti.github.io/features/">আমাদের সম্পর্কে</a>
   </div>
-  
-  
 
   <div class="notification-panel" id="notificationPanel">
     <span class="close-btn" onclick="toggleNotifications()">×</span>
     <h2>নোটিশ সমূহ</h2>
+    <div class="notification">
+      <h3>নতুন ব্যাচের ভর্তি শুরু</h3>
+      <div class="time">১৬ আগস্ট, ২০২৫, সকাল ৯:০০</div>
+      <p>মেডিকেল ভর্তি পরীক্ষার নতুন ব্যাচের জন্য ভর্তি শুরু হয়েছে। বিস্তারিত জানতে যোগাযোগ করুন।</p>
+    </div>
     <div class="notification">
       <h3>ডেমো এক্স্যাম ফ্রি</h3>
       <div class="time">১১ এপ্রিল, ২০২৫, সকাল ৯:০০</div>
@@ -319,19 +321,18 @@
     </div>
     <div class="site-name">
       <span>MediQ</span>
-     
     </div>
-    <img class="notice-img"
-      src="https://i.ibb.co.com/8g4VS95W/Untitled-design-removebg-preview.png"
+    <img class="notice-img" src="https://i.ibb.co.com/8g4VS95W/Untitled-design-removebg-preview.png"
       alt="Notice Icon" onclick="toggleNotifications()">
   </div>
 
-  <div class="container">
-    <h2>আসসালামু আলাইকুম!</h2>
-    <p>মেডিকেল ভর্তি পরীক্ষাসহ যেকোনো ভর্তি পরীক্ষায় কাঙ্খিত ফলাফল পেতে নিয়মিত পরীক্ষা দেওয়ার কোনো বিকল্প নেই।
-      আর তুমি যদি চাও স্বপ্নের মেডিকেলে একটি সিট কনফার্ম করতে, তাহলে নিয়মিত পরীক্ষা দিয়ে নিজেকে যাচাই করো!</p>
-    <div class="button-container">
-      <a href="https://medicalprostuti.github.io/features/"" class="button">শুরু করো</a>
+  <div class="main-content">
+    <div class="container">
+      <h2>আসসালামু আলাইকুম!</h2>
+      <p>মেডিকেল ভর্তি পরীক্ষাসহ যেকোনো ভর্তি পরীক্ষায় কাঙ্খিত ফলাফল পেতে নিয়মিত পরীক্ষা দেওয়ার কোনো বিকল্প নেই। আর তুমি যদি চাও স্বপ্নের মেডিকেলে একটি সিট কনফার্ম করতে, তাহলে নিয়মিত পরীক্ষা দিয়ে নিজেকে যাচাই করো!</p>
+      <div class="button-container">
+        <a href="https://medicalprostuti.github.io/features/" class="button">শুরু করো</a>
+      </div>
     </div>
   </div>
 
@@ -360,4 +361,4 @@
 
 </body>
 
-    </html>
+            </html>
